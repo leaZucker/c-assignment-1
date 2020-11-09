@@ -3,7 +3,7 @@ AR = ar
 FLAGS = -Wall -g
  
 all: power.o basicMath.o main.o mymathd mymaths
-	$(CC) $(FLAGS) -o myMath main.o power.o basicMath.o
+	$(CC) $(FLAGS) -o myMath.exe main.o power.o basicMath.o
 
 mymathd: power.o basicMath.o
 	$(CC) -shared -o libmyMath.so power.o basicMath.o
@@ -29,4 +29,4 @@ main.o: main.c myMath.h
 .PHONY: clean 
 	
 clean:	
-	rm -rf *.o *.a *.so  
+	rm -rf *.o *.a *.so *.exe
